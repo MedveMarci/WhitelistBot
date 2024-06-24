@@ -1,0 +1,22 @@
+{
+  "name": "whitelistbot",
+  "version": "1.0",
+  "description": "Whitelist bot discord szerverekhez",
+  "main": "index.js",
+  "type": "commonjs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MedveMarci/WhitelistBot.git"
+  },
+  "author": "MedveMarci",
+  "bugs": {
+    "url": "https://github.com/MedveMarci/WhitelistBot/issues"
+  },
+  "homepage": "https://github.com/MedveMarci/WhitelistBot#readme",
+  "dependencies": {
+    "@types/node": "^18.15.3",
+    "chalk": "^4.1.2",
+    "discord.js": "^14.15.3",
+    "fs": "^0.0.1-security"
+  }
+}

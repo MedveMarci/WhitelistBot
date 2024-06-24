@@ -1,0 +1,16 @@
+{
+  "Token": "ODE4NzM0OTU1MTAxNDIxNTY5.G3mB00.n--zxe9iZmarcgez0WoQBbry4m0r4LWRVAEscA",
+  "WhitelistChannelID": "1254907859439980648",
+  "WhitelistRoleID": "1254915035797520526",
+  "WhitelistMessageID": "1254919123519934585",
+  "Test": [
+    {
+      "Mi a PG?": ["Programozói Gyakorlat", "Hősködés", "Pálinka Gőz"],
+      "Megoldás": 1
+    },
+    {
+      "Mi az MG?": ["Műszaki Gyakorlat", "Műszaki Gőz", "Műszaki Gépészet", "MetaGaming"],
+      "Megoldás": 4
+    }
+  ]
+}
