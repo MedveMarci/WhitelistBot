@@ -147,7 +147,10 @@ async function whitelistInitialize() {
                 await interaction.editReply({content: "Helyes válasz!\nSikeresen teljesítetted a tesztet, megkaptad a Whitelist rangot!"}).catch(() => console.error(chalk.red("Nem tudtam elküldeni a privát üzenetet!")));
                 doing = doing.filter(item => item.id !== member.id);
                 return;
-            } else await nextQuestion(member);
+            } else {
+                data.question++;
+                await nextQuestion(member);
+            }
         } else {
             await interaction.reply({content: "Hibás válasz!", ephemeral: true});
             const data = doing.find(item => item.id === member.id);
@@ -167,7 +170,10 @@ async function whitelistInitialize() {
                 await interaction.editReply({content: "Hibás válasz!\nSikeresen teljesítetted a tesztet, megkaptad a Whitelist rangot!"}).catch(() => console.error(chalk.red("Nem tudtam elküldeni a privát üzenetet!")));
                 doing = doing.filter(item => item.id !== member.id);
                 return;
-            } else await nextQuestion(member);
+            } else {
+                data.question++;
+                await nextQuestion(member);
+            }
         }
     });
 }
@@ -231,7 +237,6 @@ async function nextQuestion(member: GuildMember) {
             member.send({content: "Nem tudtam szerkeszteni a kérdést!"});
         });
     }
-    data.question++;
 }
 
 function getChannel(id: string) {

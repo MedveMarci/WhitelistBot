@@ -166,8 +166,10 @@ function whitelistInitialize() {
                     doing = doing.filter(item => item.id !== member.id);
                     return;
                 }
-                else
+                else {
+                    data.question++;
                     yield nextQuestion(member);
+                }
             }
             else {
                 yield interaction.reply({ content: "Hibás válasz!", ephemeral: true });
@@ -192,8 +194,10 @@ function whitelistInitialize() {
                     doing = doing.filter(item => item.id !== member.id);
                     return;
                 }
-                else
+                else {
+                    data.question++;
                     yield nextQuestion(member);
+                }
             }
         }));
     });
@@ -260,7 +264,6 @@ function nextQuestion(member) {
                 member.send({ content: "Nem tudtam szerkeszteni a kérdést!" });
             }));
         }
-        data.question++;
     });
 }
 function getChannel(id) {
